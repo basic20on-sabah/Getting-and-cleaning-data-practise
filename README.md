@@ -1,15 +1,56 @@
 # Getting and Cleaning Data Course Project
-This repository contains the required code and documentation for the Coursera Getting and Cleaning Data course project.
 
-## Files Included:
-1. `run_analysis.R`: The R script that downloads, cleans, merges the data, and calculates the final averages.
-2. `tidy_data_average.txt`: The final tidy data set containing the average of each variable for each activity and each subject.
-3. `CodeBook.md`: Description of the variables, data, and transformations.
+This repository contains my solution for the Coursera
+Getting and Cleaning Data course project.
 
-## How the Script Works:
-1. Downloads and unzips the dataset.
-2. Merges the training and the test sets to create one data set.
-3. Extracts only the measurements on the mean and standard deviation for each measurement.
-4. Uses descriptive activity names to name the activities in the data set.
-5. Appropriately labels the data set with descriptive variable names.
-6. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## Dataset
+
+The project uses the Human Activity Recognition Using Smartphones
+Dataset (UCI HAR Dataset).
+
+The dataset contains measurements collected from the accelerometers
+And gyroscopes of smartphones worn by subjects while performing
+Different activities.
+
+## Files
+
+-	`run_analysis.R` - R script used to download, read, merge, clean,
+  And summarize the data.
+-	`tidy_data_average.txt` - Final tidy dataset containing the average
+  Of each selected measurement for each subject and activity.
+-	`CodeBook.md` - Describes the data, variables, and transformations.
+
+## How the Script Works
+
+The `run_analysis.R` script performs the following steps:
+
+1. Downloads and unzips the UCI HAR Dataset.
+2. Reads the training and test data.
+3. Merges the training and test sets.
+4. Extracts only measurements related to the mean and standard
+   Deviation.
+5. Uses descriptive activity names instead of activity numbers.
+6. Appropriately labels the variables with descriptive names.
+7. Creates a second tidy dataset containing the average of each
+   Selected variable for each subject and each activity.
+8. Writes the final dataset to `tidy_data_average.txt`.
+
+## Output
+
+The final tidy dataset contains:
+
+- 180 observations
+- 68 variables
+- 30 subjects
+- 6 activities
+
+Each row represents one subject performing one activity.
+
+The six activities are:
+
+- WALKING
+- WALKING_UPSTAIRS
+- WALKING_DOWNSTAIRS
+- SITTING
+- STANDING
+- LAYING
